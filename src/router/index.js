@@ -4,9 +4,9 @@ import LayoutAuth from '@/layouts/Auth';
 import LayoutDefault from '@/layouts/Default';
 import Login from '@/views/Login';
 import Register from '@/views/Register';
+import VerifyEmail from '@/views/VerifyEmail';
 
 /*
-import VerifyEmail from '@/views/VerifyEmail';
 import ForgotPassword from '@/views/ForgotPassword';
 import ResetPassword from '@/views/ResetPassword';
 import Home from '@/views/Home';
@@ -26,9 +26,15 @@ const routes = [
         ],
     },
     {
-        path: '/register', component: LayoutAuth,
+        path: '/registro', component: LayoutAuth,
         children: [
             { path: '', name: 'register', component: Register },
+        ],
+    },
+    {
+        path: '/verificar-email', component: LayoutAuth,
+        children: [
+            { path: '', name: 'verifyEmail', component: VerifyEmail },
         ],
     },
 
@@ -49,12 +55,7 @@ const routes = [
         ],
     },
 
-    {
-        path: '/verificar-email', component: LayoutAuth,
-        children: [
-            { path: '', name: 'verifyEmail', component: VerifyEmail },
-        ],
-    },
+    
     {
         path: '/esqueci-senha', component: LayoutAuth,
         children: [

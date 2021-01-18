@@ -1,11 +1,7 @@
 module.exports = {
     purge: [],
-    darkMode: 'media',
     theme: {
         extend: {
-            screens: {
-                dark: { raw: '(prefers-color-scheme: dark)' },
-            },
             colors: {
                 gray: {
                     '100': '#F7FAFC',
