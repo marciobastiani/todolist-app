@@ -5,11 +5,11 @@ import LayoutDefault from '@/layouts/Default';
 import Login from '@/views/Login';
 import Register from '@/views/Register';
 import VerifyEmail from '@/views/VerifyEmail';
+import ForgotPassword from '@/views/ForgotPassword';
 
 /*
-import ForgotPassword from '@/views/ForgotPassword';
-import ResetPassword from '@/views/ResetPassword';
 import Home from '@/views/Home';
+import ResetPassword from '@/views/ResetPassword';
 import Guard from '@/service/middleware';
 import Profile from '@/views/Profile';
 import TodoTasks from '@/views/TodoTasks';
@@ -18,7 +18,6 @@ import TodoTasks from '@/views/TodoTasks';
 Vue.use(VueRouter);
 
 const routes = [
-
     {
         path: '/login', component: LayoutAuth,
         children: [
@@ -35,6 +34,12 @@ const routes = [
         path: '/verificar-email', component: LayoutAuth,
         children: [
             { path: '', name: 'verifyEmail', component: VerifyEmail },
+        ],
+    },
+    {
+        path: '/esqueci-senha', component: LayoutAuth,
+        children: [
+            { path: '', name: 'forgotPassword', component: ForgotPassword },
         ],
     },
 
@@ -54,14 +59,7 @@ const routes = [
             { path: '', name: 'login', component: Login },
         ],
     },
-
     
-    {
-        path: '/esqueci-senha', component: LayoutAuth,
-        children: [
-            { path: '', name: 'forgotPassword', component: ForgotPassword },
-        ],
-    },
     {
         path: '/recuperar-senha', component: LayoutAuth,
         children: [
