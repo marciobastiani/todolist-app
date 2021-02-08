@@ -71,7 +71,7 @@
                         class="w-5 h-5 mr-2"
                     >
 
-                    ALETRAR SENHA
+                    ALTERAR SENHA
                 </button>
 
                 <div class="my-4 text-center">

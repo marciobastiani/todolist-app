@@ -6,10 +6,10 @@ import Login from '@/views/Login';
 import Register from '@/views/Register';
 import VerifyEmail from '@/views/VerifyEmail';
 import ForgotPassword from '@/views/ForgotPassword';
+import ResetPassword from '@/views/ResetPassword';
 
 /*
 import Home from '@/views/Home';
-import ResetPassword from '@/views/ResetPassword';
 import Guard from '@/service/middleware';
 import Profile from '@/views/Profile';
 import TodoTasks from '@/views/TodoTasks';
@@ -42,6 +42,12 @@ const routes = [
             { path: '', name: 'forgotPassword', component: ForgotPassword },
         ],
     },
+    {
+        path: '/recuperar-senha', component: LayoutAuth,
+        children: [
+            { path: '', name: 'resetPassword', component: ResetPassword },
+        ],
+    },
 
     /*{
         path: '/', component: LayoutDefault,
@@ -60,12 +66,7 @@ const routes = [
         ],
     },
     
-    {
-        path: '/recuperar-senha', component: LayoutAuth,
-        children: [
-            { path: '', name: 'resetPassword', component: ResetPassword },
-        ],
-    },*/
+    */
 
 ];
 
