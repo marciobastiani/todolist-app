@@ -7,19 +7,27 @@ import Register from '@/views/Register';
 import VerifyEmail from '@/views/VerifyEmail';
 import ForgotPassword from '@/views/ForgotPassword';
 import ResetPassword from '@/views/ResetPassword';
-
-/*
 import Home from '@/views/Home';
 import Guard from '@/service/middleware';
 import Profile from '@/views/Profile';
-import TodoTasks from '@/views/TodoTasks';
-*/
+
+//import TodoTasks from '@/views/TodoTasks';
 
 Vue.use(VueRouter);
 
 const routes = [
     {
+        path: '/', component: LayoutDefault,
+        beforeEnter: Guard.redirectIfNotAuthenticated,
+        children: [
+            { path: '', name: 'index', component: Home },
+            { path: 'perfil', name: 'profile', component: Profile },
+            //{ path: 'todo/:id', name: 'todo-tasks', component: TodoTasks },
+        ],
+    },
+    {
         path: '/login', component: LayoutAuth,
+        beforeEnter: Guard.redirectIfAuthenticated,
         children: [
             { path: '', name: 'login', component: Login },
         ],
@@ -49,22 +57,8 @@ const routes = [
         ],
     },
 
-    /*{
-        path: '/', component: LayoutDefault,
-        beforeEnter: Guard.redirectIfNotAuthenticated,
-        children: [
-            { path: '', name: 'index', component: Home },
-            { path: 'perfil', name: 'profile', component: Profile },
-            { path: 'todo/:id', name: 'todo-tasks', component: TodoTasks },
-        ],
-    },
-    {
-        path: '/login', component: LayoutAuth,
-        beforeEnter: Guard.redirectIfAuthenticated,
-        children: [
-            { path: '', name: 'login', component: Login },
-        ],
-    },
+    /*
+    
     
     */
 
