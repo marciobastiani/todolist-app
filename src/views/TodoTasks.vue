@@ -131,10 +131,6 @@
                 this.todo.tasks.splice(idx, 1);
             },
 
-
-
-
-
         },
     };
 </script>
